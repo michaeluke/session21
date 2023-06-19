@@ -1,0 +1,77 @@
+.container{
+    margin-top: 200px;
+.row{
+
+ 
+
+.card{
+
+    height: 200px;
+    margin-bottom: 100px;
+    .card-img-top{
+
+
+        position: absolute;
+        top: -60px;
+        left: 20px;
+        width: 66px;
+        height: 66px;
+        border-radius: 35%;
+      
+    }
+  
+}
+
+}
+}
+
+.parent{
+position:absolute;
+margin-inline: 300px;
+.btn-title{
+    width: 300px;
+    height: 50px;
+    margin-top: 100px;
+  }
+  .btn-filter{
+    width: 300px;
+    height: 50px;
+    margin-top: 100px;
+  }
+}
+
+.header {
+    background: linear-gradient(to right, #8e44ad, #c39bd3);
+    height: 200px;
+    position: relative;
+  }
+  
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: #c39bd3;
+  }
+  
+  .wave:before,
+  .wave:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    background: inherit;
+  }
+  
+  .wave:before {
+    left: 0;
+    border-radius: 50% 50% 0 0;
+  }
+  
+  .wave:after {
+    right: 0;
+    border-radius: 50% 50% 0 0;
+  }
+  
