@@ -72,7 +72,7 @@ export default function Home() {
       setJobData(filteredJobs)
     }
    else{
-    setSearchQuery("Software Engineer")
+    setSearchQuery("Frontend")
    }
  
   };
@@ -80,7 +80,7 @@ export default function Home() {
 
   useEffect(() => {
     if (!fetched) {
-      setSearchQuery("Software Engineer");
+      setSearchQuery("Frontend");
       intialize(true);
     }
   }, []);

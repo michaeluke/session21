@@ -92,6 +92,7 @@
 
 .slider:before {
   position: absolute;
+  cursor: pointer;
   content: "";
   height: 26px;
   width: 26px;
@@ -156,6 +157,10 @@ html {
   width: 100px;
   height: 100%;
 }
+.img-company img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .carrier {
   background-color: #ffffff;
@@ -176,7 +181,7 @@ html {
 }
 
 .parent-btn {
-  margin-right: 43px !important;
+  margin-left: 0px;
 }
 
 .company-button {
@@ -188,12 +193,7 @@ html {
 }
 
 .info {
-  margin-right: 40px;
   padding-bottom: 10px;
-}
-
-.info_only {
-  margin-right: 100px;
 }
 
 .footer_bg {
@@ -217,12 +217,12 @@ html {
   cursor: pointer;
 }
 
-.company-site.d-flex.justify-content-evenly.dark-mode {
+.company-site.d-flex.justify-content-betweeen.dark-mode {
   background-color: #19202D;
   color: white;
 }
 
-.company-site.d-flex.justify-content-evenly.light-mode {
+.company-site.d-flex.justify-content-between.light-mode {
   background-color: #FFFFFF;
   color: black;
 }
@@ -247,6 +247,16 @@ html {
   color: black;
 }
 
+.company-button.dark-mode {
+  background-color: #2e3a4f;
+  color: white;
+}
+
+.company-button.light-mode {
+  background-color: #eee9e9;
+  color: black;
+}
+
 .new {
   margin-top: 32px;
 }
@@ -265,6 +275,20 @@ html {
 
 .row-1 {
   padding-top: 40px;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
   padding-inline: 40px;
+}
+
+.lists {
+  padding-top: 30px;
+  margin-left: 20px;
+}
+
+.title- {
+  padding-bottom: 30px;
+}
+
+.parent_btn {
+  padding-left: 100px;
+  margin-right: 20px;
 }/*# sourceMappingURL=App.css.map */

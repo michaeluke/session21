@@ -45,22 +45,22 @@ export default function Job_Details({}) {
         <div className="row unique justify-content-center">
           <div className=" carrier col-sm-12 col-md-7 col-lg-7">
             <div
-              className={`company-site d-flex justify-content-evenly ${theme}`}
+              className={`company-site d-flex justify-content-between ${theme}`}
             >
-              <div className="img-company">
+              <div className="img-company col-md-3">
                 <img
                   src={job_array.job_array.thumbnail}
                   alt="Card image not_available"
                 ></img>
               </div>
-              <div className="info">
+              <div className="info col-md-9">
                 <div className="d-flex  ">
                   <div className="info_only">
                     <h5>{job_array.job_array.company_name}</h5>
-                    <p sx={{color:'gray'}}>{job_array.job_array.related_links[0].link}</p>
+                    <p sx={{color:'gray', fontSize:'2px'}}>{job_array.job_array.related_links[0].link.slice(0, 30)}</p>
                   </div>
                   <div className="parent_btn">
-                    <button className="company-button">Company Site </button>
+                    <button className={`company-button ${theme}`}>Company Site </button>
                   </div>
                 </div>
               </div>
@@ -78,12 +78,12 @@ export default function Job_Details({}) {
                 <div className="footer-2 d-flex justify-content-between">
                   <div>
                     <div className="d-flex">
-                  <h8 >{job_array.job_array.detected_extensions.posted_at}</h8>
+                  <h6 >{job_array.job_array.detected_extensions.posted_at}</h6>
                   <div>  ,   </div>   
-                  <h8 >{job_array.job_array.detected_extensions.schedule_type}</h8>
+                  <h6 >{job_array.job_array.detected_extensions.schedule_type}</h6>
                   </div>
-                    <h4>{job_array.job_array.title}</h4>
-                    <h8>{job_array.job_array.location}</h8>
+                    <h3>{job_array.job_array.title}</h3>
+                    <h6>{job_array.job_array.location}</h6>
                   </div>
                   <div className="footer_2_btn">
                     <button className="footer-button">Apply Now </button>
@@ -96,6 +96,34 @@ export default function Job_Details({}) {
 
                 <p>{job_array.job_array.description}</p>
               </div>
+
+              <div className="row row-1">
+
+                <h5 className="title-">Requirements</h5>
+                <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+                <ul>
+                {job_array.job_array.job_highlights[0].items.map((item, index) => (
+                <li className="lists" key={index}>{item}</li> 
+                ))}
+             
+                </ul>
+           
+            </div>
+
+            <div className="row row-1">
+
+                <h5 className="title-">What Will you do</h5>
+                <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+                <ol>
+                {job_array.job_array.job_highlights[1].items.map((item, index) => (
+                <li className="lists" key={index}>{item}</li> 
+                ))}
+             
+                </ol>
+           
+            </div>
+
+
 
 
 
