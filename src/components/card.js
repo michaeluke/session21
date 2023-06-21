@@ -32,6 +32,11 @@ export default function Card(job){
           <div className={`card ${theme}`}>
             <img className="card-img-top" src={jobImage} alt="Card image not_available"></img>
             <div className="card-body">
+            <div className="d-flex">
+                  <h6 >{job_array.detected_extensions.posted_at}</h6>
+                  <div>  ,   </div>   
+                  <h6 >{job_array.detected_extensions.schedule_type}</h6>
+                  </div>
                <h5 onClick={handleCardClick} className="card-title ">{job_array.title}</h5>
            
               <p className="card-text">{job_array.company_name}</p>
