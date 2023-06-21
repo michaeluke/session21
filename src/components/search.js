@@ -18,8 +18,8 @@ export default function Search(props) {
   return (
     <div className='parent_search d-flex align-item-center justify-content-center'>
       
-    <SearchIcon sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:"56px",top:"15px"}}/>
-    <LocationOnIcon  sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:"330px",top:"13px"}}/>
+    <SearchIcon sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:"35px",top:"15px"}}/>
+ 
     <input className='btn-title'
           type="text"
           value={searchTitle}
@@ -36,7 +36,7 @@ export default function Search(props) {
 
     <button onClick={handleSearch}> Search </button>
 
-
+    <LocationOnIcon  sx={{ color:'#939BF4', fontSize:'26px',position:'relative',right:"350px",top:"13px"}}/>
     </div>
   );
 };
