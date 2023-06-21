@@ -25,7 +25,7 @@ export default function Home() {
 
 
       const fetchJobData = async () => {
-    
+        if(job_title){
           try {
             const response = await fetch(
                 `https://cors-anywhere.herokuapp.com/https://serpapi.com/search?engine=google_jobs&q=${job_title}&hl=en&api_key=${api_key}`,{
@@ -51,17 +51,13 @@ export default function Home() {
 
      
         }
+      }
   
 
-  const get_data = (job_title) => {
-    if(job_title!='' &&job_title){
-      
-     
-      setSearchQuery(job_title);
-      fetchJobData();
 
-    }
-  };
+
+
+ 
 
   const get_location= (location) => {
 
@@ -79,19 +75,27 @@ export default function Home() {
   };
 
 
+  const get_data = (title) =>{
+
+setSearchQuery(title);
+
+  }
+ 
   useEffect(() => {
     if (!fetched) {
       setSearchQuery("Frontend");
       intialize(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (fetched && job_title !== "") {
       fetchJobData();
     }
-  }, [fetched]);
+  }, [fetched]);  
+
   
+  useEffect(() => {
+    if (fetched && job_title) {
+      fetchJobData(); 
+    }
+  }, [job_title]);
+
 
 
 
@@ -122,7 +126,7 @@ export default function Home() {
     
 
         {jobData.map((job) => (
-              <div className="col-sm-12 col-md-6 col-lg-4" key={job.job_id}>{/* Render job card here */} <Card job={job}/> </div>
+              <div className="col-sm-12 col-md-6 col-lg-4" key={job.job_id}> <Card job={job}/> </div>
             ))}
             
          
