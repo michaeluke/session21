@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-
+import SearchIcon from '@mui/icons-material/Search';
 
 export default function Search(props) {
 
   const [search_title, setSearchQuery] = useState('');
   const [search_location, setlocation] = useState('');
+  
 
   const handleSearch = (event) => {
     props.get_data(event.target.value);
@@ -18,19 +19,21 @@ export default function Search(props) {
 
 
   return (
-    <div className='parent d-flex'>
+    <div className='parent_search d-flex align-item-center justify-content-center'>
+      
+    <SearchIcon sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:"35px",top:"15px"}}/>
     <input className='btn-title'
           type="text"
           value={search_title}
           onChange={handleSearch}
-          placeholder='Search job by Title'
+          placeholder='Filter by Title....'
         />
 
     <input className='btn-filter'
           type="text"
           value={search_location}
           onChange={handleSearch2}
-          placeholder='Filter job by location'
+          placeholder='Filter by location..'
         />
     </div>
   );

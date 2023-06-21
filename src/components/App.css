@@ -14,23 +14,18 @@
   border-radius: 35%;
 }
 
-.parent_search {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  margin-top: -25px;
-}
 .parent_search .btn-title {
   width: 300px;
-  height: 100%;
-  padding-left: 40px;
+  height: 50px;
+  margin-top: 100px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: none;
 }
 .parent_search .btn-filter {
   width: 300px;
-  height: 100%;
+  height: 50px;
+  margin-top: 100px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border-right: none;
@@ -40,15 +35,17 @@
   border-color: lightgrey;
 }
 
-.header {
-  background-color: #5964E0;
+.header_color {
   width: 100%;
   height: 160px;
   border-bottom-left-radius: 70px;
-  padding-inline: 42px;
+  background-color: #5964E0;
 }
-.header #dev {
-  color: rgb(255, 255, 255);
+.header_color #dev {
+  color: white;
+  position: absolute;
+  left: 100px;
+  top: 50px;
 }
 
 .dark-mode {
@@ -72,31 +69,21 @@
 }
 
 .switch {
-  position: relative;
   width: 60px;
   height: 34px;
   cursor: pointer;
 }
 
 .slider {
-  position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: whitesmoke;
   transition: 0.4s;
   border-radius: 34px;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
   height: 26px;
   width: 26px;
-  left: 4px;
-  bottom: 4px;
   background-color: #5964E0;
   transition: 0.4s;
   border-radius: 50%;
@@ -134,7 +121,7 @@ html {
   background-color: var(--bg-color);
 }
 
-@media (max-width: 789px) {
+@media (max-width: 1024px) {
   .app {
     width: 100%;
   }
@@ -143,7 +130,4 @@ html {
   .app {
     width: 100%;
   }
-}
-.app {
-  width: 100%;
 }/*# sourceMappingURL=App.css.map */
