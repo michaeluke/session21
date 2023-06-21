@@ -29,6 +29,7 @@
   border: none;
 }
 .parent_search .btn-filter {
+  padding-left: 40px;
   width: 300px;
   height: 100%;
   border-top-right-radius: 5px;
