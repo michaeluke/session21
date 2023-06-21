@@ -286,6 +286,31 @@ width: 100%;
   background-color: #eee9e9;
   color: black;
 }
+.btn-title.dark-mode{
+
+  background-color: #19202D;
+  color: white;
+
+}
+.btn-title.light-mode{
+
+  background-color: #FFFFFF;
+  color: black;
+
+}
+
+.btn-filter.dark-mode{
+
+  background-color: #19202D;
+  color: white;
+
+}
+.btn-filter.light-mode{
+
+  background-color: #FFFFFF;
+  color: black;
+
+}
 .new{
   margin-top: 32px;
 
@@ -319,4 +344,10 @@ width: 100%;
 .parent_btn{
   padding-left: 100px;
   margin-right:20px;
+}
+
+.search_imp{
+  border: none;
+  background-color: #5964E0;
+  color: white;
 }
