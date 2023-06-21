@@ -101,12 +101,13 @@ export default function Job_Details({}) {
 
                 <h5 className="title-">Requirements</h5>
                 <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
-                <ul>
-                {job_array.job_array.job_highlights[0].items.map((item, index) => (
-                <li className="lists" key={index}>{item}</li> 
-                ))}
-             
-                </ul>
+                {job_array.job_array.job_highlights[0]?.items && (
+                <ol>
+                    {job_array.job_array.job_highlights[0].items.map((item, index) => (
+                    <li className="lists" key={index}>{item}</li> 
+                    ))}
+                </ol>
+                )}
            
             </div>
 
@@ -114,12 +115,13 @@ export default function Job_Details({}) {
 
                 <h5 className="title-">What Will you do</h5>
                 <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+                {job_array.job_array.job_highlights[1]?.items && (
                 <ol>
-                {job_array.job_array.job_highlights[1].items.map((item, index) => (
-                <li className="lists" key={index}>{item}</li> 
-                ))}
-             
+                    {job_array.job_array.job_highlights[1].items.map((item, index) => (
+                    <li className="lists" key={index}>{item}</li> 
+                    ))}
                 </ol>
+                )}
            
             </div>
 
@@ -136,8 +138,8 @@ export default function Job_Details({}) {
       <div className={`footer_bg ${theme}`}>
         <div className="footer d-flex ">
           <div>
-            <h6>{job_array.job_array.title}</h6>
-            <h8>{job_array.job_array.company_name}</h8>
+            <h4>{job_array.job_array.title}</h4>
+            <h6>{job_array.job_array.company_name}</h6>
           </div>
           <div className="footer_btn">
             <button className="footer-button">Apply Now </button>

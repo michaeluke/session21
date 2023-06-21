@@ -3,41 +3,40 @@ import SearchIcon from '@mui/icons-material/Search';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 export default function Search(props) {
 
-  const [search_title, setSearchQuery] = useState('');
-  const [search_location, setlocation] = useState('');
+  const [searchTitle, setSearchTitle] = useState('');
+  const [searchLocation, setSearchLocation] = useState('');
   
 
   const handleSearch = (event) => {
-    props.get_data(event.target.value);
-    setSearchQuery(event.target.value)
+    props.get_data(searchTitle,searchLocation);
+    props.get_location(searchTitle,searchLocation);
   };
 
-  const handleSearch2 = (event) => {
-    props.get_location(event.target.value);
-    setlocation(event.target.value)
-  };
+ 
 
 
   return (
     <div className='parent_search d-flex align-item-center justify-content-center'>
       
-    <SearchIcon sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:"35px",top:"15px"}}/>
-   
+    <SearchIcon sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:"56px",top:"15px"}}/>
+    <LocationOnIcon  sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:"330px",top:"13px"}}/>
     <input className='btn-title'
           type="text"
-          value={search_title}
-          onChange={handleSearch}
+          value={searchTitle}
+          onChange={(event) => setSearchTitle(event.target.value)}
           placeholder='Filter by Title....'
         />
 
     <input className='btn-filter'
           type="text"
-          value={search_location}
-          onChange={handleSearch2}
+          value={searchLocation}
+          onChange={(event) => setSearchLocation(event.target.value)}
           placeholder='Filter by location..'
         />
 
-<LocationOnIcon  sx={{ color:'#939BF4', fontSize:'26px',position:'relative',right:"300px",top:"13px"}}/>
+    <button onClick={handleSearch}> Search </button>
+
+
     </div>
   );
 };

@@ -53,12 +53,13 @@ export default function Home() {
         }
   
 
-  const get_search_query = (job_title) => {
+  const get_data = (job_title) => {
     if(job_title!='' &&job_title){
       
      
       setSearchQuery(job_title);
       fetchJobData();
+
     }
   };
 
@@ -113,7 +114,7 @@ export default function Home() {
       
     
     
-      <Search get_data={get_search_query} get_location={get_location} />
+      <Search get_data={get_data} get_location={get_location} />
  
       <div className={`container wrapper`}>
         <div className="row">
