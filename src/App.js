@@ -11,7 +11,6 @@ function App() {
 
   return (
   <ThemeProvider>
-  <Job_Details/>
   <Home/>
  </ThemeProvider>
   );
