@@ -38,7 +38,7 @@ export default function Search(props) {
     <div className={`checkbox d-flex ${theme}`}>
     <div className='d-flex'>
     <input type="checkbox" id="fulltime" name="fulltime" value="" />
-    <label for="fulltime"> Full-Time Job</label>
+    <label htmlFor="fulltime"> Full-Time Job</label>
     </div>
     
     <button className="search_imp" onClick={handleSearch}> Search </button>
