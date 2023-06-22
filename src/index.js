@@ -20,7 +20,7 @@ root.render(
 
 
   <Route exact path="/" element={<App/>} />
-  <Route path="/job/:job_id" element={<Job_Details/>} />
+  <Route path="/:job_id" element={<Job_Details/>} />
   <Route path="*" element={<NoPage />} />
 
  

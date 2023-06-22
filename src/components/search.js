@@ -18,8 +18,8 @@ export default function Search(props) {
 
   return (
     <div className={`parent_search d-flex align-item-center justify-content-center`}>
-      
-    <SearchIcon sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:"35px",top:"15px"}}/>
+    <LocationOnIcon  sx={{ color:'#939BF4', fontSize:'26px', position:'relative',left:"25%",top:"13px"}}/>
+    <SearchIcon sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:"3%",top:"15px"}}/>
  
     <input className={`btn-title ${theme}`}
           type="text"
@@ -35,9 +35,17 @@ export default function Search(props) {
           placeholder='Filter by location..'
         />
 
+    <div className={`checkbox d-flex ${theme}`}>
+    <div className='d-flex'>
+    <input type="checkbox" id="fulltime" name="fulltime" value="" />
+    <label for="fulltime"> Full-Time Job</label>
+    </div>
+    
     <button className="search_imp" onClick={handleSearch}> Search </button>
+    </div>
 
-    <LocationOnIcon  sx={{ color:'#939BF4', fontSize:'26px',position:'relative',right:"350px",top:"13px"}}/>
+
+
     </div>
   );
 };

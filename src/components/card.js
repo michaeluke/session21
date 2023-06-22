@@ -17,7 +17,7 @@ export default function Card(job){
 
   const navigate = useNavigate();
   const handleCardClick = () => {
-      navigate(`/job/${job_array.job_id}`,
+      navigate(`${job_array.job_id}`,
       {state: { job_array: job_array }},
    );
   };

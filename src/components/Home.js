@@ -21,14 +21,14 @@ export default function Home() {
 
   const api_key = '946843c8ebc3cf73ccc164a0606e3267fd6c1d7ac55853d406f67584a3fd160e'
  
-   
+  const page = 0;
 
 
       const fetchJobData = async () => {
         if(job_title){
           try {
             const response = await fetch(
-                `https://cors-anywhere.herokuapp.com/https://serpapi.com/search?engine=google_jobs&q=${job_title}&hl=en&api_key=${api_key}`,{
+                `https://cors-anywhere.herokuapp.com/https://serpapi.com/search?engine=google_jobs&start=${page}&q=${job_title}&hl=en&api_key=${api_key}`,{
                   
             
                 headers: {

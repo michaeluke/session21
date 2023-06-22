@@ -21,7 +21,7 @@
   margin-top: -25px;
 }
 .parent_search .btn-title {
-  width: 300px;
+  width: 20%;
   height: 100%;
   padding-left: 40px;
   border-top-left-radius: 5px;
@@ -30,11 +30,9 @@
 }
 .parent_search .btn-filter {
   padding-left: 40px;
-  width: 300px;
+  width: 20%;
   height: 100%;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-right: none;
+  border-right: 2px solid;
   border-top: none;
   border-bottom: none;
   border-left: 2px solid;
@@ -140,9 +138,15 @@ html {
   .app {
     width: 100%;
   }
+  .parent_search {
+    width: 100%;
+  }
 }
 @media (max-width: 400px) {
   .app {
+    width: 100%;
+  }
+  .parent_search {
     width: 100%;
   }
 }
@@ -158,7 +162,8 @@ html {
   width: 100px;
   height: 100%;
 }
-.img-company img {
+.img-company .img-fluid {
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -318,4 +323,20 @@ html {
   border: none;
   background-color: #5964E0;
   color: white;
+}
+
+.checkbox.light-mode {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.checkbox.dark-mode {
+  background-color: #19202D;
+  color: white;
+}
+
+.checkbox {
+  align-items: center;
+  width: 20%;
+  justify-content: space-evenly;
 }/*# sourceMappingURL=App.css.map */

@@ -49,6 +49,7 @@ export default function Job_Details({}) {
             >
               <div className="img-company col-md-3">
                 <img
+                  className="img-fluid"
                   src={job_array.job_array.thumbnail}
                   alt="Card image not_available"
                 ></img>
