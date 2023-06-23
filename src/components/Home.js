@@ -63,7 +63,7 @@ export default function Home() {
   const set_page_now = () =>{
 
     Set_page(prevState=> prevState + 1);
-    // console.log(page)
+    
     debugger
 
   }

@@ -17,7 +17,8 @@ export default function Search(props) {
 
 
   return (
-    <div className={`parent_search d-flex align-item-center justify-content-center`}>
+    <div>
+    <div className={`parent_search d-none d-sm-flex align-item-center justify-content-center`}>
    
 
 
@@ -49,6 +50,32 @@ export default function Search(props) {
     
     <button className="search_imp" onClick={handleSearch}> Search </button>
     </div>
+
+
+
+    </div>
+    
+    <div className='parent_mobile d-flex d-sm-none align-item-center justify-content-center '>
+
+      
+
+      <input className={`${theme}`}
+          type="text"
+          value={searchTitle}
+          onChange={(event) => setSearchTitle(event.target.value)}
+          placeholder='Filter by Title....'
+        />
+
+      <button className="search_imp" onClick={handleSearch}> 
+      
+      <SearchIcon sx={{ color:'#939BF4', fontSize:'26px'}}/>
+      
+      </button>
+      
+
+     
+      </div>
+
 
 
 

@@ -30,6 +30,7 @@
   width: 100%;
   height: 50px;
   margin-top: -25px;
+ 
   
 
 .btn-title{
@@ -161,7 +162,7 @@ html{
 }
 
 
-@media (max-width: 789px) {
+@media only screen and(max-width: 789px) {
   .app{
 width: 100%;
 
@@ -171,15 +172,13 @@ width: 100%;
     width: 100%;
   }
 }
-@media (max-width: 400px) {
+@media  only screen and (max-width: 490px) {
 .app{
   width: 100%;
 
+
   
   
-}
-.parent_search{
-  width: 100%;
 }
 }
 

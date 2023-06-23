@@ -142,12 +142,16 @@ html {
     width: 100%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 490px) {
   .app {
     width: 100%;
   }
   .parent_search {
     width: 100%;
+    display: none;
+  }
+  .parent_mobile {
+    display: flex;
   }
 }
 .app {
