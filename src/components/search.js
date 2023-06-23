@@ -6,14 +6,14 @@ export default function Search(props) {
 
   const [searchTitle, setSearchTitle] = useState('');
   const [searchLocation, setSearchLocation] = useState('');
+  
   const { theme, toggleTheme } = useContext(ThemeContext);
 
-  const handleSearch = (event) => {
+  const handleSearch =() => {
     props.get_data(searchTitle,searchLocation);
-    props.get_location(searchTitle,searchLocation);
   };
 
- 
+
 
 
   return (
@@ -37,7 +37,7 @@ export default function Search(props) {
 
     <div className={`checkbox d-flex ${theme}`}>
     <div className='d-flex'>
-    <input type="checkbox" id="fulltime" name="fulltime" value="" />
+    <input type="checkbox" id="fulltime" name="fulltime" value=""  />
     <label htmlFor="fulltime"> Full-Time Job</label>
     </div>
     

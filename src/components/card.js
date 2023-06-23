@@ -22,7 +22,7 @@ export default function Card(job){
    );
   };
 
-  console.log(job_array)
+  // console.log(job_array)
 
   // Pass the selected job array as state
 
