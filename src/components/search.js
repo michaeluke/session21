@@ -18,16 +18,22 @@ export default function Search(props) {
 
   return (
     <div className={`parent_search d-flex align-item-center justify-content-center`}>
-    <LocationOnIcon  sx={{ color:'#939BF4', fontSize:'26px', position:'relative',left:"25%",top:"13px"}}/>
-    <SearchIcon sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:"3%",top:"15px"}}/>
- 
+   
+
+
+    <div>
+    <SearchIcon sx={{ color:'#939BF4', fontSize:'26px' , position:'relative',left:'100%',top:'20%'}}/>
+    </div>
+
     <input className={`btn-title ${theme}`}
           type="text"
           value={searchTitle}
           onChange={(event) => setSearchTitle(event.target.value)}
           placeholder='Filter by Title....'
         />
-
+  <div className={`icon ${theme}`}>
+ <LocationOnIcon  sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:'100%',top:'20%'}}/>
+ </div>
     <input className={`btn-filter ${theme}`}
           type="text"
           value={searchLocation}

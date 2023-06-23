@@ -233,6 +233,14 @@ html {
   color: black;
 }
 
+.icon.dark-mode {
+  background-color: #19202D;
+}
+
+.icon.light-mode {
+  background-color: #FFFFFF;
+}
+
 .wrapper-1.dark-mode {
   background-color: #19202D;
   color: white;
