@@ -4,6 +4,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import {CardsTheme, ThemeContext} from './Theme'
 import './style/App.css'
 import Modal_mobile from './modal_mobile';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
 export default function Search(props) {
 
   const [searchTitle, setSearchTitle] = useState('');
@@ -74,20 +75,24 @@ export default function Search(props) {
 
     </div>
     
-    {!view_modal &&<div className='parent_mobile d-flex d-sm-none align-item-center justify-content-center '>
+    {!view_modal && <div className='parent_mobile d-flex d-sm-none align-item-center justify-content-center '>
 
       
 
-      <input className={`${theme}`}
+      <input className={`btn-title ${theme}`}
           type="text"
           value={searchTitle}
           onChange={(event) => setSearchTitle(event.target.value)}
           placeholder='Filter by Title....'
           required/>
 
+      <div className= {`btn-title ${theme}`}>
+      <FilterAltIcon sx={{color:"#5964E0"}}/>
+      </div>
+
       <button className="search_imp" onClick={handle_modal}> 
       
-      <SearchIcon sx={{ color:'#939BF4', fontSize:'26px'}}/>
+      <SearchIcon sx={{ color:'white', fontSize:'26px'}}/>
       
       </button>
       
