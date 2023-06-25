@@ -1,13 +1,14 @@
-import React, { useState , useContext } from 'react';
+import React, { useState , useContext, useEffect } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import {CardsTheme, ThemeContext} from './Theme'
 import './style/App.css'
+import Modal_mobile from './modal_mobile';
 export default function Search(props) {
 
   const [searchTitle, setSearchTitle] = useState('');
   const [searchLocation, setSearchLocation] = useState('');
- 
+  const [view_modal , toggle_modal] = useState(false)
   const { theme, toggleTheme } = useContext(ThemeContext);
 
 
@@ -19,7 +20,17 @@ export default function Search(props) {
     props.set_filter_job();
   };
 
+  const handle_modal = () => {
 
+    toggle_modal(!view_modal)
+
+  }
+
+
+
+
+
+  
 
 
 
@@ -63,7 +74,7 @@ export default function Search(props) {
 
     </div>
     
-    <div className='parent_mobile d-flex d-sm-none align-item-center justify-content-center '>
+    {!view_modal &&<div className='parent_mobile d-flex d-sm-none align-item-center justify-content-center '>
 
       
 
@@ -74,7 +85,7 @@ export default function Search(props) {
           placeholder='Filter by Title....'
           required/>
 
-      <button className="search_imp" onClick={handleSearch}> 
+      <button className="search_imp" onClick={handle_modal}> 
       
       <SearchIcon sx={{ color:'#939BF4', fontSize:'26px'}}/>
       
@@ -82,7 +93,14 @@ export default function Search(props) {
       
 
      
-      </div>
+      </div>}
+
+      {view_modal &&
+      
+      <Modal_mobile handle_filter={handle_filter} setSearchLocation={setSearchLocation} handleSearch={handleSearch} searchLocation={searchLocation} handle_modal={handle_modal}/>
+      
+      
+      }
 
 
 

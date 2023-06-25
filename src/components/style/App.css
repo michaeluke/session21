@@ -346,4 +346,10 @@ html {
   align-items: center;
   width: 20%;
   justify-content: space-evenly;
+}
+
+.checkbox- {
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
 }/*# sourceMappingURL=App.css.map */
