@@ -11,21 +11,21 @@ const handle_submit =()=>{
 }
 
   return (
-    <div class="modal d-block text-center d-sm-none" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
+    <div className="modal d-block text-center d-sm-none" tabIndex="-1" role="dialog">
+      <div className="modal-dialog" role="document">
+        <div className="modal-content">
+          <div className="modal-header">
             <button
               onClick={props.handle_modal}
               type="button"
-              class="close"
+              className="close"
               data-dismiss="modal"
               aria-label="Close"
             >
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body justify-content-center">
+          <div className="modal-body justify-content-center">
           <input className={`btn-filter ${theme}`}
           type="text"
           value={props.searchLocation}
@@ -43,7 +43,7 @@ const handle_submit =()=>{
         
         </div>
         
-        <div class="modal-footer justify-content-center">
+        <div className="modal-footer justify-content-center">
 
 <button className="search_imp" onClick={handle_submit}> Search </button>
   
