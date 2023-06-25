@@ -13,11 +13,10 @@ import Job_Details from "./Job_details";
 
 export default function Home() {
   const [job_title, setSearchQuery] = useState("");
-  var [jobData, setJobData] = useState([]);
+  var   [jobData, setJobData] = useState([]);
   const [location,setlocation]= useState("");
   const [fetched,intialize] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
-
   const [page , Set_page] = useState(0);
 
   const api_key = '946843c8ebc3cf73ccc164a0606e3267fd6c1d7ac55853d406f67584a3fd160e'

@@ -27,6 +27,7 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: none;
+  outline: none;
 }
 .parent_search .btn-filter {
   padding-left: 40px;
@@ -37,6 +38,7 @@
   border-bottom: none;
   border-left: 2px solid;
   border-color: lightgrey;
+  outline: none;
 }
 
 .header {
@@ -145,13 +147,6 @@ html {
 @media (max-width: 490px) {
   .app {
     width: 100%;
-  }
-  .parent_search {
-    width: 100%;
-    display: none;
-  }
-  .parent_mobile {
-    display: flex;
   }
 }
 .app {

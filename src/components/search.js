@@ -2,6 +2,7 @@ import React, { useState , useContext } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import {CardsTheme, ThemeContext} from './Theme'
+import './style/App.css'
 export default function Search(props) {
 
   const [searchTitle, setSearchTitle] = useState('');
@@ -31,7 +32,7 @@ export default function Search(props) {
           value={searchTitle}
           onChange={(event) => setSearchTitle(event.target.value)}
           placeholder='Filter by Title....'
-        />
+          required/>
   <div className={`icon ${theme}`}>
  <LocationOnIcon  sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:'100%',top:'20%'}}/>
  </div>
@@ -40,7 +41,7 @@ export default function Search(props) {
           value={searchLocation}
           onChange={(event) => setSearchLocation(event.target.value)}
           placeholder='Filter by location..'
-        />
+          required/>
 
     <div className={`checkbox d-flex ${theme}`}>
     <div className='d-flex'>
@@ -64,7 +65,7 @@ export default function Search(props) {
           value={searchTitle}
           onChange={(event) => setSearchTitle(event.target.value)}
           placeholder='Filter by Title....'
-        />
+          required/>
 
       <button className="search_imp" onClick={handleSearch}> 
       
