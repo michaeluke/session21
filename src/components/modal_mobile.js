@@ -14,17 +14,6 @@ const handle_submit =()=>{
     <div className="modal d-block text-center d-sm-none" tabIndex="-1" role="dialog">
       <div className="modal-dialog" role="document">
         <div className="modal-content">
-          <div className="modal-header">
-            <button
-              onClick={props.handle_modal}
-              type="button"
-              className="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
           <div className="modal-body justify-content-center">
           <input className={`btn-filter ${theme}`}
           type="text"
