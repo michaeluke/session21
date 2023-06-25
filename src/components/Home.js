@@ -35,7 +35,7 @@ export default function Home() {
       console.log(location)
       const loc = 'location='+location+'&'
       setlocation(loc);
-      debugger
+      // debugger
       
   }
   else if(title){
@@ -46,7 +46,7 @@ export default function Home() {
     setlocation('');
     const pg = 0;
     Set_page(pg);
-    debugger
+    // debugger
 
   }
   else if(location){
@@ -64,14 +64,14 @@ export default function Home() {
 
     Set_page(prevState=> prevState + 1);
     
-    debugger
+    // debugger
 
   }
  
   useEffect(() => {
     if (!fetched) {
       setSearchQuery("Frontend");
-      debugger
+      // debugger
       intialize(true);
     }
   }, [fetched]);  
@@ -82,7 +82,7 @@ export default function Home() {
 
 
   useEffect(()=>{
-    debugger
+    // debugger
     if(job_title){
     const fetchJobData = async () => {
         try {
@@ -100,7 +100,7 @@ export default function Home() {
             .then((data) => {
               setJobData(jobData = jobData.concat(data.jobs_results))
               // console.log(data.jobs_results);
-               debugger
+              //  debugger
             })
             
           
