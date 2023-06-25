@@ -18,6 +18,8 @@ export default function Home() {
   const [fetched,intialize] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [page , Set_page] = useState(0);
+  const [filtered , set_filter] = useState(false);
+  const [filtered_Data, filter_jobs] = useState([]);
 
   const api_key = '946843c8ebc3cf73ccc164a0606e3267fd6c1d7ac55853d406f67584a3fd160e'
  
@@ -66,6 +68,23 @@ export default function Home() {
     // debugger
 
   }
+
+
+  const set_filter_job = () =>{
+
+
+    set_filter(!filtered);
+   
+ 
+  }
+  useEffect(()=>{
+
+    if(filtered ==true){
+      const filtered_array = jobData.filter((job) => job.detected_extensions.schedule_type == "Full-time")
+      filter_jobs(filtered_array)
+      debugger
+    }
+  },[filtered])
  
   useEffect(() => {
     if (!fetched) {
@@ -113,6 +132,10 @@ export default function Home() {
     }
 },[job_title,page,location])
 
+
+
+
+
   return (
 
 
@@ -132,14 +155,18 @@ export default function Home() {
       
     
     
-      <Search get_data={get_data}  />
+      <Search get_data={get_data} set_filter_job={set_filter_job} />
  
       <div className={`container wrapper`}>
         <div className="row">
          
     
-      
-        {jobData?.map((job) => (
+        { filtered && filtered_Data?.map((job) => (
+              <div className="col-sm-12 col-md-6 col-lg-4" key={job.job_id}> <Card job={job}/> </div>
+            ))}
+
+        
+        {!filtered && jobData?.map((job) => (
               <div className="col-sm-12 col-md-6 col-lg-4" key={job.job_id}> <Card job={job}/> </div>
             ))}
             

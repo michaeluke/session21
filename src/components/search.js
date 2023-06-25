@@ -7,12 +7,18 @@ export default function Search(props) {
 
   const [searchTitle, setSearchTitle] = useState('');
   const [searchLocation, setSearchLocation] = useState('');
-  
+ 
   const { theme, toggleTheme } = useContext(ThemeContext);
+
 
   const handleSearch =() => {
     props.get_data(searchTitle,searchLocation);
   };
+
+  const handle_filter =() => {
+    props.set_filter_job();
+  };
+
 
 
 
@@ -34,6 +40,7 @@ export default function Search(props) {
           placeholder='Filter by Title....'
           required/>
   <div className={`icon ${theme}`}>
+
  <LocationOnIcon  sx={{ color:'#939BF4', fontSize:'26px',position:'relative',left:'100%',top:'20%'}}/>
  </div>
     <input className={`btn-filter ${theme}`}
@@ -45,7 +52,7 @@ export default function Search(props) {
 
     <div className={`checkbox d-flex ${theme}`}>
     <div className='d-flex'>
-    <input type="checkbox" id="fulltime" name="fulltime" value=""  />
+    <input type="checkbox" id="fulltime" name="fulltime" value="" onChange={handle_filter} />
     <label htmlFor="fulltime"> Full-Time Job</label>
     </div>
     
